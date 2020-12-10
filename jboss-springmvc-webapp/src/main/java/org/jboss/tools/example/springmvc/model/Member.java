@@ -60,8 +60,18 @@ public class Member implements Serializable {
     @Digits(fraction = 0, integer = 12, message = "Incorrect Format, valid e.g. 121212121212")
     @Column(name = "phone_number")
     private String phoneNumber;
+    
+    private String IBAN;
 
-    public Long getId() {
+    public String getIBAN() {
+		return IBAN;
+	}
+
+	public void setIBAN(String iBAN) {
+		IBAN = iBAN;
+	}
+
+	public Long getId() {
         return id;
     }
 
